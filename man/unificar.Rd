@@ -5,7 +5,7 @@
 \alias{unificar}
 \title{Unificacion de archivo}
 \usage{
-unificar(dir = c("", ""), id = NULL)
+unificar(dir = c("", ""), id = NULL, mens = T)
 }
 \arguments{
 \item{dir}{direccion}

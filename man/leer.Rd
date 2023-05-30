@@ -5,7 +5,7 @@
 \alias{leer}
 \title{Lectura de archivos dinamica}
 \usage{
-leer(arch = c(NULL, NULL), cod = "LATIN1", ...)
+leer(arch = c(NULL, NULL), cod = "LATIN1", mens = T, ...)
 }
 \arguments{
 \item{arch}{Es una cadena o un vector con 2 datos.

@@ -26,27 +26,3 @@ radix <- function(cons = list(dir="",cor="",sql=c(host="",puerto="",usuario="",c
           green("\nTotal de directorios:",bold$blue(length(.rdx$ds))),
           cyan("\n========================================================"))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

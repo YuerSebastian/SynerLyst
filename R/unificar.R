@@ -14,26 +14,13 @@
 #' @importFrom fs dir_ls
 #' @name unificar
 #' @export
-unificar <- function(dir=c("",""),id=NULL){
+unificar <- function(dir=c("",""),id=NULL,mens = T){
   if(length(dir)==1) pat <- .rdx$ds[grep(dir,.rdx$ds)] else pat <- .rdx$ds[grep(dir[1],.rdx$ds)]
   #Especificando direcciones y funciones a usar.
   dirs <- dir_ls(pat,type = "file",regexp = if(length(dir)==1) NULL else dir[2])
-  df <- bind_rows(lapply(dirs, leer) %>% setNames(basename(dirs)),.id = id)
+  df <- bind_rows(lapply(dirs, leer, mens = mens) %>% setNames(basename(dirs)),.id = id)
   message(cyan("\n=====================================================\n"),
           bold$blue(length(dirs)),green(" archivos unificados."),
           cyan("\n====================================================="))
   return(df)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

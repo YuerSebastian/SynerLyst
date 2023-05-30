@@ -18,7 +18,7 @@
 #' @importFrom fs dir_ls
 #' @name leer
 #' @export
-leer <- function(arch=c(NULL,NULL),cod="LATIN1",...){
+leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
   #Condiciones en caso de directorio o archivo no existente, o si hay mas de uno (solo direcorio)
   if (length(arch)==1) { #Si el archivo se especifica con una ruta completa
     pat <- arch
@@ -48,9 +48,9 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",...){
                             magenta("\n================================================================"))
   }
   #Condiciones para indicar que funcion utilizar para la lectura de archivos
-  message(cyan("\n=====================================================\n"),
-          green("Leyendo archivo "),blue(pat),
-          cyan("\n====================================================="))
+  if(mens) message(cyan("\n=====================================================\n"),
+                   green("Leyendo archivo "),blue(pat),
+                   cyan("\n====================================================="))
   ext <- file_ext(pat)
   fun <- case_when(
     ext %in% c("xlsx", "xls", "xlsm") ~ 'read_excel(pat,col_types = "text",...)',
@@ -62,7 +62,3 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",...){
   df <- eval(parse(text = fun))
   return(df)
 }
-
-
-
-
