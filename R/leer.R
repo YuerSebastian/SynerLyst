@@ -41,7 +41,7 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
     }
     dir <- pat #Solo se usa esta variable para imprimir en el error que directorio se utilizo.
     print(pat)
-    archs <- dir_ls(pat,type = "file")
+    archs <- iconv(dir_ls(pat,type = "file"),to = "LATIN1") #Error con codificacion extraño
     pat <- archs[grep(arch[1],archs)]
     print(archs)
     print(pat)
