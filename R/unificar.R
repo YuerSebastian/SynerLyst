@@ -1,4 +1,3 @@
-#' @encoding UTF-8
 #' @title Unificacion de archivo
 #' @description Unifica archivos en un dolo dataframe, incluso si tienen diferente extension.
 #' @param dir direccion

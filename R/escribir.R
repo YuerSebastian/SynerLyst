@@ -1,4 +1,3 @@
-#' @encoding UTF-8
 #' @title Escritura
 #' @description Escribe el archivo, sea en una ruta completa o por un patron.
 #' @param dir direccion

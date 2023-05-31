@@ -1,4 +1,3 @@
-#' @encoding UTF-8
 #' @title Lectura de archivos dinamica
 #' @description Lee de una manera dinamica, dependiendo de la extension, un archivo sin importar su formato.
 #' @param arch Es una cadena o un vector con 2 datos.
@@ -59,6 +58,6 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
     TRUE ~ "otro"
   )
   if(fun=="otro") stop(bgWhite("El archivo no se puede leer, debe ser un archivo xlsx,xlsm,xls,txt o csv."))
-  df <- eval(parse(text = fun,encoding = "LATIN1"))
+  df <- eval(parse(text = fun))
   return(df)
 }

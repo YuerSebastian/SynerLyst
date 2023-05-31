@@ -1,4 +1,3 @@
-#' @encoding UTF-8
 #' @title Raiz de la libreria.
 #' @description Genera una lista de datos (directorios, correo y conexion MySQL) para su uso interno global.
 #' @param cons Es una lista con los datos "dir", "cor" y "sql".
