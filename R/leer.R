@@ -43,6 +43,7 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
     print(pat)
     archs <- dir_ls(pat,type = "file")
     pat <- archs[grep(arch[1],archs)]
+    print(archs)
     print(pat)
     if(length(pat)==0) stop(magenta("\n================================================================\n"),
                             "El ",bold("archivo "),bold$blue(arch[1])," no existe.\nDirectorio utilizado: ",bold$blue(dir),
