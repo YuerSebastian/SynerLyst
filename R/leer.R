@@ -40,8 +40,10 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
       pat <- pat[1]
     }
     dir <- pat #Solo se usa esta variable para imprimir en el error que directorio se utilizo.
+    print(pat)
     archs <- dir_ls(pat,type = "file")
     pat <- archs[grep(arch[1],archs)]
+    print(pat)
     if(length(pat)==0) stop(magenta("\n================================================================\n"),
                             "El ",bold("archivo "),bold$blue(arch[1])," no existe.\nDirectorio utilizado: ",bold$blue(dir),
                             magenta("\n================================================================"))

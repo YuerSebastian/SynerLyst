@@ -1,4 +1,3 @@
-#' @encoding UTF-8
 #' @title Listar datos
 #' @description Datos
 #' @param tipo tipo de datos
