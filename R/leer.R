@@ -1,3 +1,4 @@
+#' @encoding LATIN1
 #' @title Lectura de archivos dinamica
 #' @description Lee de una manera dinamica, dependiendo de la extension, un archivo sin importar su formato.
 #' @param arch Es una cadena o un vector con 2 datos.
