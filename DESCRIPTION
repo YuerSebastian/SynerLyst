@@ -6,7 +6,7 @@ Author: Joel Sebatian Salinas Barrera
 Maintainer: Joel Sebatian Salinas Barrera <yourself@somewhere.net>
 Description: Simplifica en gran medida la lectura y escritura de datos en general.
 License: GPL-3
-Encoding: UTF-8
+Encoding: LATIN1
 LazyData: true
 RoxygenNote: 7.2.3
 Imports: readxl (>= 1.3.1), crayon (>= 1.5.2), vroom (>= 1.6.3), dplyr (>= 1.0.10), tidyr (>= 1.2.1), tools (>= 4.2.3), fs (>= 1.5.2), data.table (>= 1.14.8)
