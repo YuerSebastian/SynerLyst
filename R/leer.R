@@ -17,6 +17,7 @@
 #' @importFrom fs dir_ls
 #' @name leer
 #' @export
+#' @encoding LATIN1
 leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
   #Condiciones en caso de directorio o archivo no existente, o si hay mas de uno (solo direcorio)
   if (length(arch)==1) { #Si el archivo se especifica con una ruta completa
