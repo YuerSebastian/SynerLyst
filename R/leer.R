@@ -35,15 +35,15 @@ leer <- function(arch=c(NULL,NULL),cod="LATIN1",mens = T,...){
            magenta("\n================================================================"))
     }else if(length(pat)>1){
       warning(magenta("\n=====================================================\n"),
-              yellow("Hay "),bold$blue(length(pat)),yellow(" directorios con el patron "),bold$blue(arch[2]),yellow(".\nSe uso el primer elemento: "),
+              yellow("Hay "),bold$blue(length(pat)),yellow(" coincidencias con el patron "),bold$blue(arch[2]),yellow(".\nSe uso el primer elemento: "),
               bold$blue(pat[1]),
               magenta("\n====================================================="))
       pat <- pat[1]
     }
     dir <- pat #Solo se usa esta variable para imprimir en el error que directorio se utilizo.
-    #archs <- iconv(dir_ls(pat,type = "file"),to = "LATIN1")#Error con codificacion extraño
+    #archs <- iconv(dir_ls(pat,type = "file"),to = "LATIN1") #Error con codificacion rara, no se usa por el momento
     archs <- dir_ls(pat,type = "file")
-    pat <- archs[grep(arch[1],archs)]
+    pat <- archs[archs %in% paste0(pat,"/",arch[1])]
     if(length(pat)==0) stop(magenta("\n================================================================\n"),
                             "El ",bold("archivo "),bold$blue(arch[1])," no existe.\nDirectorio utilizado: ",bold$blue(dir),
                             magenta("\n================================================================"))
